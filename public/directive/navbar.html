@@ -1,0 +1,98 @@
+<nav>
+    <div class="container-fluid">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div>
+            <ul>
+                <h3>Work It!</h3>
+                <ul class="navUl">
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = false" href="#/home">Home</a></li>
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = true" href="#/workouts">Workouts</a></li>
+                    <li ng-show="userService.isAuthenticated()" class="navLi"><a class="navA" ng-click="homeDiv = true" href="#/gallery">Gallery</a></li>
+                </ul>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-hide="userService.isAuthenticated()"><a href="" data-toggle="modal" data-target="#myModalLogin">Login</a></li>
+                <li ng-hide="userService.isAuthenticated()"><a href="" data-toggle="modal" data-target="#myModalSignup">Signup</a></li>
+                <li ng-show="userService.isAuthenticated()"><a href="#/logout">Logout</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Modal -->
+<div ng-controller="SignupController" class="modal fade" id="myModalSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create a new user</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="control-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="user.name">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" ng-model="user.username">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" ng-model="user.password">
+                    </div>
+                    <br>
+
+                    <div class="control-group">
+                        <label>Repeat Password</label>
+                        <input type="password" class="form-control" ng-model="passwordRepeat">
+                        <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
+                    </div>
+
+                    <br>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="center-block btn btn-default btn-lg" ng-click="signup(user)">Signup</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div ng-controller="LoginController" class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="stopVideo()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Log in</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="control-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" ng-model="user.username">
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" ng-model="user.password">
+                    </div>
+                    <br>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="center-block btn btn-default btn-lg" ng-click="login(user)">Login</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

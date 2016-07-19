@@ -1,0 +1,26 @@
+body {
+    padding-bottom: 50px;
+}
+
+nav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 5;
+}
+
+.navUl {
+    list-style: none;
+}
+
+.navLi {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+navA {
+    color: black;
+}

@@ -1,0 +1,151 @@
+<div class="galleryBody" ng-controller="ExerciseController">
+    <h1>Check out these exercises!</h1>
+    <hr>
+    <h2>Upper Body</h2>
+    <hr>
+
+    <div class="row">
+        <div class="scrollBar">
+
+            <div class="scrollDiv" ng-repeat="arms in uBEx track by $index">
+                <a data-toggle="modal" data-target="#armModal" href="" ng-click="selectUB(arms)"><img class="scrollImage center-block" src="{{arms.image}}" alt=""></a>
+
+            </div>
+        </div>
+        <hr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="armModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{selected.body}}</p>
+                        <img class="exImg" ng-src="{{selected.instructImg}}" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button ng-click="stopVideo()" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="saveEx(selected)" data-dismiss="modal">Add to Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>Lower Body</h2>
+    <hr>
+
+    <div class="row">
+        <div class="scrollBar">
+
+            <div class="scrollDiv" ng-repeat="legs in lBEx track by $index">
+                <a data-toggle="modal" data-target="#legModal" href="" ng-click="selectLB(legs)"><img class="scrollImage center-block" src="{{legs.image}}" alt=""></a>
+
+            </div>
+        </div>
+        <hr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="legModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{selected.body}}</p>
+                        <img class="exImg" ng-src="{{selected.instructImg}}" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="saveEx(selected)" data-dismiss="modal">Add to Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>Core</h2>
+    <hr>
+
+    <div class="row">
+        <div class="scrollBar">
+
+
+            <div class="scrollDiv" ng-repeat="core in cEx track by $index">
+                <a data-toggle="modal" data-target="#coreModal" href="" ng-click="selectCore(core)"><img class="scrollImage center-block" src="{{core.image}}" alt=""></a>
+
+            </div>
+
+        </div>
+        <hr>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="coreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{selected.body}}</p>
+                        <img class="exImg" ng-src="{{selected.instructImg}}" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="saveEx(selected)" data-dismiss="modal">Add to Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <h2>Cardio</h2>
+    <hr>
+
+    <div class="row">
+        <div class="scrollBar">
+
+
+            <div class="scrollDiv" ng-repeat="cardio in runs track by $index">
+                <a data-toggle="modal" data-target="#cardioModal" href="" ng-click="selectCardio(cardio)"><img class="scrollImage center-block" src="{{cardio.image}}" alt=""></a>
+
+            </div>
+
+        </div>
+        <hr>
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="cardioModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{selected.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{selected.body}}</p>
+                        <img class="exImg" ng-src="{{selected.instructImg}}" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="saveEx(selected)" data-dismiss="modal">Add to Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
