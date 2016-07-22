@@ -16,6 +16,10 @@ app.config(function ($routeProvider) {
             controller: "LogoutController",
             template: ""
         })
+        .when("/calories", {
+            templateUrl: "/pages/calories.html",
+            controller: "CalorieController"
+        })
 
 });
 

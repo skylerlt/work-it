@@ -17,6 +17,7 @@
     "gitignore": "^0.5.0",
     "jsonwebtoken": "^7.0.1",
     "mongoose": "^4.5.3",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "requestify": "^0.1.17"
   }
 }

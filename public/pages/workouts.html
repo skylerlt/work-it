@@ -1,5 +1,7 @@
 <div class="container" ng-controller="ExerciseController">
-    <div>
+    <h1>Go to the gallery and add some exercises!</h1>
+    <h3>Once you do you're routing will show here:</h3>
+    <div ng-if="workOutList.length">
         <h1>You're Workout!</h1>
         <button class="btn btn-lg btn-danger" ng-click="deleteAll()">Clear All</button>
         <br>

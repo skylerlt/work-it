@@ -35,6 +35,7 @@ app.use("/api/lowerBody", require("./routes/lowerBodyRouter"));
 app.use("/api/core", require("./routes/coreRouter"));
 app.use("/api/cardio", require("./routes/cardioRouter"));
 app.use("/api/exercises", require("./routes/exerciseRouter"));
+//app.use("/", require("./routes/metsRouter"));
 
 app.listen(port, function () {
     console.log("Did you hear that?  Sounded like port " + port);

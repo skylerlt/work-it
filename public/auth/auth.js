@@ -43,6 +43,7 @@ app.service("TokenService", ["$localStorage", function ($localStorage) {
 }]);
 
 app.factory("AuthInterceptor", ["$location", "$q", "TokenService", function ($location, $q, TokenService) {
+
     return {
         request: function (config) {
             var token = TokenService.getToken();
